@@ -39,3 +39,32 @@ nav ul li {
 .container {
   padding-top: 80px;
 }
+
+.section {
+  width: 100%;
+}
+
+.login-form {
+  border: 1px solid black;
+  padding: 40px 10px;
+}
+
+.login-form label, .login-form input {
+  width: 100%;
+}
+
+.login-form .submit-button {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* recordatorio: darle al full container un padding bottom del tamaño del footer */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
