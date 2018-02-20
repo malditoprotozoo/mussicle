@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "AIzaSyBNw_KqGZwp8xg-J1r-e8spIIXkglnlhF0",
   authDomain: "mussicle-app.firebaseapp.com",
   databaseURL: "https://mussicle-app.firebaseio.com",
