@@ -17,12 +17,14 @@ const inputPass = $('#input-pass');
 const inputMail = $('#input-mail');
 const btnLogOut = $('#btn-logout');
 const inputNick = $('#input-nick');
+// PENDIENTE: Modificar el elemento padre
+const parentElement = $('#main-container');
 
 // Creando funciones
 
 // Función para logearse a Firebase
 const login = () => {
-  btnLog.click(function(error) {
+  parentElement.on('click', btnLog, function(error) {
     const email = inputMail.val();
     const pass = inputPass.val();
     const auth = firebase.auth();
@@ -37,7 +39,7 @@ const login = () => {
 
 // Función para registrarse en Firebase
 const signUp = () => {
-  btnReg.click(function(error) {
+  parentElement.on('click', btnReg, function(error) {
     // POR HACER: Revisar que este input sea un email y no cualquier string
     const email = inputMail.val();
     const pass = inputPass.val();
@@ -55,6 +57,7 @@ const signUp = () => {
 const realTimeListener = () => {
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
+      // Remplazar main-container con el elemento padre
       $('#main-container').append(`<button id="btn-logout">Log Out</button>`)
       console.log(firebaseUser);
     } else {
@@ -66,6 +69,7 @@ const realTimeListener = () => {
 // Creando función para desloguearse
 
 const signout = () => {
+  // Remplazar main-container con el elemento padre
   $('#main-container').on('click', btnLogOut, function() {
     firebase.auth().signOut();
     btnLogOut.remove();
