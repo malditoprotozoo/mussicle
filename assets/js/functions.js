@@ -70,10 +70,16 @@ const signout = () => {
 };
 
 // Función para obtener info de usuario
-const getInfoUser = url => {
-  const promise = 'http://ws.audioscrobbler.com' + url;
+const getInfoUser = (method, user) => {
+  const url = `http://ws.audioscrobbler.com/2.0/?method=${method}&user=${user}`;
+  const keyNFormat = '&api_key=1e92b5cf4be024c785f07d3a515f8b61&format=json';
+  const promise = url + keyNFormat;
+  // Escribir el código restante a partir de acá
   console.log(promise);
 }
+
+// Ejemplo de aplicación
+//getInfoUser('user.getlovedtracks', 'malditoprotozoo');
 
 /*
 * DATOS DE LAST.FM
