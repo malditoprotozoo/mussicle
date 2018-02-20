@@ -1,0 +1,41 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+
+
+.full-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: yellow;
+  position: relative;
+}
+
+nav {
+  border: 1px solid black;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.navigation {
+  float: right;
+}
+
+.logo {
+  float: left;
+}
+
+.container {
+  padding-top: 80px;
+}

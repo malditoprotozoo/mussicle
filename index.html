@@ -12,10 +12,57 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- container con nav -->
+  <div class="full-container">
+    <!-- nav -->
+    <nav>
+      <ul class="logo">
+        <!-- logo here -->
+        <span>LOGO</span>
+      </ul>
+      <ul class="navigation">
+        <li>Búsqueda</li>
+        <li>Register</li>
+        <li>Log In</li>
+      </ul>
+      <!-- lista que aparece al iniciar sesión -->
+      <ul class="d-none">
+        <li>Búsqueda</li>
+        <li>Perfil</li>
+        <li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Settings
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button">Action</button>
+              <button class="dropdown-item" type="button">Another action</button>
+              <button class="dropdown-item" type="button">Something else here</button>
+            </div>
+          </div>
+        </li>
+        <li>Cerrar sesión</li>
+      </ul> <!-- fin lista que aparece al iniciar sesión -->
+    </nav>
+    
+    <!-- container de la página que estará constantemente cambiando -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, qui? Perferendis earum explicabo possimus odit porro odio velit illum nihil deleniti aliquam hic accusantium numquam sunt et, rem, ut ratione.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </footer>
+  </div> <!-- fin full-container -->
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <!-- funciones de bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- script de firebase -->
   <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
