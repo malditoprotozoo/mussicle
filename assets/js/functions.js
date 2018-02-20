@@ -25,8 +25,9 @@ const parentElement = $('#main-container');
 // Creando funciones
 
 // Función para logearse a Firebase
-const login = () => {
-  parentElement.on('click', btnLog, function(error) {
+const login = (event) => {
+  $('#main-container #btn-login').on('click', function(error, event) {
+    //event.preventDefault();
     const email = inputMail.val();
     const pass = inputPass.val();
     const auth = firebase.auth();
@@ -40,8 +41,9 @@ const login = () => {
 };
 
 // Función para registrarse en Firebase
-const signUp = () => {
-  parentElement.on('click', btnReg, function(error) {
+const signUp = (event) => {
+  $('#main-container #btn-register').on('click', function(error) {
+    event.preventDefault();
     // POR HACER: Revisar que este input sea un email y no cualquier string
     const email = inputMailReg.val();
     const pass = inputPassReg.val();
@@ -72,7 +74,8 @@ const realTimeListener = () => {
 
 const signout = () => {
   // Remplazar main-container con el elemento padre
-  $('#main-container').on('click', btnLogOut, function() {
+  $('#main-container #btn-logout').on('click', function(event) {
+    event.preventDefault();
     firebase.auth().signOut();
     btnLogOut.remove();
   });
