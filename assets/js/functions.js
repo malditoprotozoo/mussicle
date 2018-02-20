@@ -16,6 +16,7 @@ const btnLog = $('#btn-login');
 const inputPass = $('#input-pass');
 const inputMail = $('#input-mail');
 const btnLogOut = $('#btn-logout');
+const inputNick = $('#input-nick');
 
 // Creando funciones
 
@@ -54,6 +55,7 @@ const signUp = () => {
 const realTimeListener = () => {
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
+      $('#main-container').append(`<button id="btn-logout">Log Out</button>`)
       console.log(firebaseUser);
     } else {
       console.log('not logged');
@@ -64,8 +66,9 @@ const realTimeListener = () => {
 // Creando función para desloguearse
 
 const signout = () => {
-  btnLogOut.click(function() {
+  $('#main-container').on('click', btnLogOut, function() {
     firebase.auth().signOut();
+    btnLogOut.remove();
   });
 };
 
