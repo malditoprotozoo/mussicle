@@ -68,3 +68,17 @@ const signout = () => {
     firebase.auth().signOut();
   });
 };
+
+// Función para obtener info de usuario
+const getInfoUser = url => {
+  const promise = 'http://ws.audioscrobbler.com' + url;
+  console.log(promise);
+}
+
+/*
+* DATOS DE LAST.FM
+* Application name:	mussicle
+* API key	1e92b5cf4be024c785f07d3a515f8b61
+* Shared secret	1db0b4381220365301e2c6e7ba13a37d
+* Registered to	malditoprotozoo
+*/
