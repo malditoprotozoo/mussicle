@@ -15,6 +15,8 @@ const btnReg = $('#btn-register');
 const btnLog = $('#btn-login');
 const inputPass = $('#input-pass');
 const inputMail = $('#input-mail');
+const inputPassReg = $('#input-pass-register');
+const inputMailReg = $('#input-mail-register');
 const btnLogOut = $('#btn-logout');
 const inputNick = $('#input-nick');
 // PENDIENTE: Modificar el elemento padre
@@ -41,13 +43,13 @@ const login = () => {
 const signUp = () => {
   parentElement.on('click', btnReg, function(error) {
     // POR HACER: Revisar que este input sea un email y no cualquier string
-    const email = inputMail.val();
-    const pass = inputPass.val();
+    const email = inputMailReg.val();
+    const pass = inputPassReg.val();
     const auth = firebase.auth();
 
     //Limpiando los inputs
-    inputMail.val('');
-    inputPass.val('');
+    inputMailReg.val('');
+    inputPassReg.val('');
     const promise = auth.createUserWithEmailAndPassword(email, pass);
     promise.catch(error => console.log(error.message));
   });
