@@ -37,11 +37,12 @@ nav ul li {
 }
 
 .container {
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 .section {
   width: 100%;
+  padding: 20px 0;
 }
 
 .login-form {
@@ -57,6 +58,7 @@ nav ul li {
   width: 100%;
   padding: 20px 0;
 }
+
 
 /* recordatorio: darle al full container un padding bottom del tamaño del footer */
 .footer {
