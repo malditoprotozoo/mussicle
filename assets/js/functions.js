@@ -42,7 +42,7 @@ const login = (event) => {
 
 // Función para registrarse en Firebase
 const signUp = (event) => {
-  $('#main-container #btn-register').on('click', function(error) {
+  $('#main-container #btn-register').on('click', function(event) {
     event.preventDefault();
     // POR HACER: Revisar que este input sea un email y no cualquier string
     const email = inputMailReg.val();
@@ -62,7 +62,7 @@ const realTimeListener = () => {
   firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
       // Remplazar main-container con el elemento padre
-      $('#main-container').append(`<button id="btn-logout">Log Out</button>`)
+      $('#login-menu').removeClass('d-none');
       console.log(firebaseUser);
     } else {
       console.log('not logged');
@@ -74,10 +74,10 @@ const realTimeListener = () => {
 
 const signout = () => {
   // Remplazar main-container con el elemento padre
-  $('#main-container #btn-logout').on('click', function(event) {
+  $('#login-menu #btn-logout').on('click', function(event) {
     event.preventDefault();
     firebase.auth().signOut();
-    btnLogOut.remove();
+    $('#login-menu').addClass('d-none');
   });
 };
 
